@@ -27,6 +27,8 @@
   }
 
   &-primary {
+    box-shadow: $red-drop-shadow;
+
     &:hover, &:focus {
       background: $bg-color-hover;
     }

@@ -9,6 +9,9 @@ const taxDeductionReducer = (state = initialState, action: TaxDeductionActions):
         case TaxDeductionTypes.SHOW_MODAL: {
             return {...state, showModal: true};
         }
+        case TaxDeductionTypes.CLOSE_MODAL: {
+            return {...state, showModal: false};
+        }
         default: {
             return {...state};
         }

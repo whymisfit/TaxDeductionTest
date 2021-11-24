@@ -1,0 +1,72 @@
+@import "../vars";
+
+.tax-modal {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  background-color: $bg-color-grey;
+
+  z-index: 10;
+
+  .card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: 552px;
+    width: 100%;
+
+    padding: 32px;
+    background: $white-color;
+
+    border-radius: 30px;
+
+    .btn-primary {
+      width: 100%;
+    }
+
+    &-close {
+      position: absolute;
+      top: 32px;
+      right: 32px;
+      cursor: pointer;
+    }
+
+    &-title {
+      font-size: 28px;
+      margin: 0;
+    }
+
+    &-description {
+      color: $text-color-grey;
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+
+      .label {
+        color: $text-color-black;
+      }
+
+      input {
+        border: 1px solid #DFE3E6;
+        padding: 8px 10px;
+        border-radius: 3px;
+        margin: 8px 0;
+        outline: none;
+      }
+    }
+  }
+}
