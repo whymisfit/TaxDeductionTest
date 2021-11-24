@@ -12,6 +12,9 @@ const taxDeductionReducer = (state = initialState, action: TaxDeductionActions):
         case TaxDeductionTypes.CLOSE_MODAL: {
             return {...state, showModal: false};
         }
+        case TaxDeductionTypes.UPDATE_SALARY: {
+            return {...state, salary: action.payload.salary};
+        }
         default: {
             return {...state};
         }

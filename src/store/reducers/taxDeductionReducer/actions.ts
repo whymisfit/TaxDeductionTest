@@ -1,4 +1,4 @@
-import {ICloseModal, IShowModal, TaxDeductionTypes} from "./types";
+import {ICloseModal, IShowModal, IUpdateSalary, TaxDeductionTypes} from "./types";
 
 export const showModal = (): IShowModal => {
     return {
@@ -9,5 +9,12 @@ export const showModal = (): IShowModal => {
 export const closeModal = (): ICloseModal => {
     return {
         type: TaxDeductionTypes.CLOSE_MODAL,
+    }
+}
+
+export const updateSalary = (salary: number): IUpdateSalary => {
+    return {
+        type: TaxDeductionTypes.UPDATE_SALARY,
+        payload: {salary}
     }
 }
