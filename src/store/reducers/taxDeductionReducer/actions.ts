@@ -1,4 +1,4 @@
-import {ICloseModal, IShowModal, IUpdateSalary, TaxDeductionTypes} from "./types";
+import {ICalculatePayments, ICloseModal, IShowModal, IUpdateSalary, TaxDeductionTypes} from "./types";
 
 export const showModal = (): IShowModal => {
     return {
@@ -16,5 +16,11 @@ export const updateSalary = (salary: number): IUpdateSalary => {
     return {
         type: TaxDeductionTypes.UPDATE_SALARY,
         payload: {salary}
+    }
+}
+
+export const calculatePayments = (): ICalculatePayments => {
+    return {
+        type: TaxDeductionTypes.CALCULATE_PAYMENTS,
     }
 }

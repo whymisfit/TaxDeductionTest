@@ -1,12 +1,19 @@
 export type TaxDeductionState = {
     showModal: boolean,
     salary?: number,
+    payments?: TaxPayment[],
+}
+
+export type TaxPayment = {
+    value: number,
+    selected: boolean,
 }
 
 export enum TaxDeductionTypes {
     SHOW_MODAL = "tax/SHOW_MODAL",
     CLOSE_MODAL = "tax/CLOSE_MODAL",
     UPDATE_SALARY = "tax/UPDATE_SALARY",
+    CALCULATE_PAYMENTS = "tax/CALCULATE_PAYMENTS",
 }
 
 export interface IShowModal {
@@ -22,4 +29,12 @@ export interface IUpdateSalary {
     payload: { salary: number }
 }
 
-export type TaxDeductionActions = IShowModal | ICloseModal | IUpdateSalary;
+export interface ICalculatePayments {
+    type: TaxDeductionTypes.CALCULATE_PAYMENTS
+}
+
+export type TaxDeductionActions =
+    | IShowModal
+    | ICloseModal
+    | IUpdateSalary
+    | ICalculatePayments

@@ -1,7 +1,7 @@
 import React from 'react';
 import CloseIcon from "./CloseIcon";
 import CalculateTaxInput from "./CalculateTaxInput";
-import EarlyPayments from "./EarlyPayments";
+import EarlyPayments from "./EarlyPayments/EarlyPayments";
 
 const TaxDeductionModal: React.FC = () => {
 
