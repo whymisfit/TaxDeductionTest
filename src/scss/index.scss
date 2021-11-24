@@ -1,0 +1,8 @@
+@import "vars";
+
+@import "./main-page/main-page";
+@import "./buttons/btn";
+
+*, *:after, *:before {
+  font-family: "Roboto", serif;
+}

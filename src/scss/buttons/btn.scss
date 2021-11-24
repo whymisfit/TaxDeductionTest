@@ -1,0 +1,44 @@
+@import "../vars";
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $white-color;
+  background: $bg-color-normal;
+  border-radius: 6px;
+  border: 1px solid transparent;
+
+  width: 280px;
+  height: 56px;
+
+  cursor: pointer;
+
+  transition: all .3s ease;
+
+  &.disable {
+    cursor: not-allowed;
+    background: $bg-color-disabled;
+
+    &:hover, &:focus {
+      background: $bg-color-disabled;
+    }
+  }
+
+  &-primary {
+    &:hover, &:focus {
+      background: $bg-color-hover;
+    }
+  }
+
+  &-secondary {
+    border: 1px solid $white-color;
+    font-weight: 500;
+
+    &:hover, &:focus {
+      color: $text-color-black;
+      background: $white-color;
+    }
+  }
+}
