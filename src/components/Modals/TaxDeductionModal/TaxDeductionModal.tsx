@@ -3,7 +3,22 @@ import CloseIcon from "./CloseIcon";
 import CalculateTaxInput from "./CalculateTaxInput";
 import EarlyPayments from "./EarlyPayments/EarlyPayments";
 
+enum ReduceTypes {
+    PAY = "PAY",
+    TERM = "TERM",
+}
+
+type ReduceSelect = {
+    type: ReduceTypes,
+}
+
 const TaxDeductionModal: React.FC = () => {
+
+    const [reduceType, setReduceType] = React.useState<ReduceSelect>({type: ReduceTypes.PAY});
+
+    const getActiveBudgeStyle = (type: ReduceTypes) => {
+        return type === reduceType.type ? "active" : "";
+    }
 
     return (
         <div className="tax-modal">
@@ -27,10 +42,12 @@ const TaxDeductionModal: React.FC = () => {
                     <div className="reduce">
                         <p>Что уменьшаем?</p>
                         <div className="reduce-container">
-                            <div className="budge active">
+                            <div className={`budge ` + getActiveBudgeStyle(ReduceTypes.PAY)}
+                                 onClick={() => setReduceType({type: ReduceTypes.PAY})}>
                                 Платеж
                             </div>
-                            <div className="budge">
+                            <div className={`budge ` + getActiveBudgeStyle(ReduceTypes.TERM)}
+                                 onClick={() => setReduceType({type: ReduceTypes.TERM})}>
                                 Срок
                             </div>
                         </div>
