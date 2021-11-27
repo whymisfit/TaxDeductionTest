@@ -8,22 +8,24 @@ const TaxDeductionModal: React.FC = () => {
     return (
         <div className="tax-modal">
             <div className="card">
-                <CloseIcon/>
-                <h4 className="card-title">
-                    Налоговый вычет
-                </h4>
-                <p className="card-description">
-                    Используйте налоговый вычет чтобы погасить ипотеку досрочно. Размер налогового вычета составляет не
-                    более 13% от своего официального годового дохода.
-                </p>
+                <div className="card-container">
+                    <CloseIcon/>
+                    <h4 className="card-title">
+                        Налоговый вычет
+                    </h4>
+                    <p className="card-description">
+                        Используйте налоговый вычет чтобы погасить ипотеку досрочно. Размер налогового вычета составляет не
+                        более 13% от своего официального годового дохода.
+                    </p>
 
-                <CalculateTaxInput/>
+                    <CalculateTaxInput/>
 
-                <EarlyPayments/>
+                    <EarlyPayments/>
 
-                <button className="btn btn-primary">
-                    Добавить
-                </button>
+                    <button className="btn btn-primary">
+                        Добавить
+                    </button>
+                </div>
             </div>
         </div>
     );
