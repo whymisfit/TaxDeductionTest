@@ -31,9 +31,9 @@ const TaxDeductionModal: React.FC = () => {
                     Используйте налоговый вычет чтобы погасить ипотеку досрочно. Размер налогового вычета составляет не
                     более 13% от своего официального годового дохода.
                 </p>
+                <CalculateTaxInput/>
 
                 <div className="card-container">
-                    <CalculateTaxInput/>
                     <EarlyPayments/>
                 </div>
 
