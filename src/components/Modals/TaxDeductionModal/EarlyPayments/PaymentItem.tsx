@@ -10,24 +10,25 @@ interface IPaymentItem {
 const PaymentItem: React.FC<IPaymentItem> = ({payment, id}: IPaymentItem) => {
 
     const getLabelMonth = () => {
+        console.log(123)
         switch (id) {
             case 2: {
                 return "во 2-ой год";
             }
             case 3: {
-                return "во 3-ий год";
+                return "в 3-ий год";
             }
             default: {
-                return `во ${id}-ый год`;
+                return `в ${id}-ый год`;
             }
         }
     }
 
     return (
-        <div>
+        <div className="payments-item">
             <input type="checkbox"/>
-            <p>{payment.value} рублей</p>
-            <span>{() => getLabelMonth()}</span>
+            <p className="payments-item-value">{payment.value} рублей</p>
+            <span className="payments-item-desc">{getLabelMonth()}</span>
         </div>
     );
 };

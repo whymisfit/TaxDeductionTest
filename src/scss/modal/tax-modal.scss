@@ -42,11 +42,34 @@
 
       .btn-primary {
         margin-top: auto;
+        min-height: 40px;
       }
 
       &::-webkit-scrollbar {
         width: 0;
         -ms-overflow-style: none;
+      }
+
+      .payments {
+        &-title {
+          font-weight: 600;
+        }
+
+        &-item {
+          display: flex;
+          align-items: center;
+          height: 56px;
+          border-bottom: 1px solid $bg-color-grey;
+
+          &-value {
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+
+          &-desc {
+            color: $bg-color-grey;
+          }
+        }
       }
     }
 

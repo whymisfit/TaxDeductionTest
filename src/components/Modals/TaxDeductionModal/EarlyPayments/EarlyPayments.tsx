@@ -8,10 +8,14 @@ const EarlyPayments: React.FC = () => {
     const payments = useSelector((state: RootState) => state.tax.payments);
 
     return payments ? (
-            <div>
-                Итого можете внести в качестве досрочных:
+            <div className="payments">
+                <p className="payments-title">
+                    Итого можете внести в качестве досрочных:
+                </p>
 
-                {payments?.map((payment, idx) => <PaymentItem id={idx + 1} payment={payment} key={idx}/>)}
+                {payments?.map((payment, idx) =>
+                    <PaymentItem id={idx + 1} payment={payment} key={idx}/>)
+                }
             </div>
         )
         :
