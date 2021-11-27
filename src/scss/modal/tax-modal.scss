@@ -53,6 +53,10 @@
       .payments {
         &-title {
           font-weight: 600;
+
+          @media screen and (max-width: $bp-mobile-556){
+            font-size: 14px;
+          }
         }
 
         &-item {
@@ -64,10 +68,18 @@
           &-value {
             margin-left: 10px;
             margin-right: 10px;
+
+            @media screen and (max-width: $bp-mobile-556){
+              font-size: 14px;
+            }
           }
 
           &-desc {
             color: $bg-color-grey;
+
+            @media screen and (max-width: $bp-mobile-556){
+              font-size: 14px;
+            }
           }
         }
       }
@@ -92,6 +104,10 @@
     &-title {
       font-size: 28px;
       margin: 0;
+
+      @media screen and (max-width: $bp-mobile-556){
+        font-size: 18px;
+      }
     }
 
     &-description {
@@ -99,6 +115,10 @@
       margin-top: 16px;
       margin-bottom: 0;
       line-height: 24px;
+
+      @media screen and (max-width: $bp-mobile-556){
+        font-size: 12px;
+      }
     }
 
     .input-group {
@@ -108,6 +128,11 @@
 
       .label {
         color: $text-color-black;
+        font-weight: 600;
+
+        @media screen and (max-width: $bp-mobile-556){
+          font-size: 14px;
+        }
       }
 
       input {
@@ -116,6 +141,10 @@
         border-radius: 3px;
         margin: 8px 0;
         outline: none;
+
+        @media screen and (max-width: $bp-mobile-556){
+          font-size: 14px;
+        }
       }
     }
 
@@ -130,6 +159,10 @@
           display: flex;
           margin-left: auto;
           margin-right: auto;
+
+          @media screen and (max-width: $bp-mobile-556){
+            margin: unset;
+          }
         }
 
         .budge + .budge {
@@ -151,10 +184,23 @@
             color: $white-color;
             font-weight: 300;
           }
+
+          @media screen and (max-width: $bp-mobile-556){
+            font-size: 12px;
+          }
         }
 
         > p {
           font-weight: 600;
+
+          @media screen and (max-width: $bp-mobile-556){
+            font-size: 14px;
+          }
+        }
+
+        @media screen and (max-width: $bp-mobile-556){
+          flex-direction: column;
+          align-items: start;
         }
       }
 

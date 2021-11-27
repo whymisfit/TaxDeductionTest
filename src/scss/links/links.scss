@@ -16,4 +16,8 @@
   &.red {
     color: $red-color-normal;
   }
+
+  @media screen and (max-width: $bp-mobile-556){
+    font-size: 12px;
+  }
 }
