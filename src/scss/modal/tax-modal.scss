@@ -157,10 +157,20 @@
           font-weight: 600;
         }
       }
+
+      @media screen and (max-width: $bp-mobile-556){
+        margin-bottom: 30px;
+      }
     }
 
     @media screen and (max-width: $bp-mobile-556) {
+      margin-top: 30px;
       max-height: 100vh;
+      border-radius: 0;
     }
+  }
+
+  @media screen and (max-width: $bp-mobile-556) {
+    overflow-y: hidden;
   }
 }
