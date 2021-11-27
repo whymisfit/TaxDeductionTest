@@ -69,12 +69,14 @@
     &-description {
       color: $text-color-grey;
       margin-top: 16px;
-      margin-bottom: 24px;
+      margin-bottom: 0;
+      line-height: 24px;
     }
 
     .input-group {
       display: flex;
       flex-direction: column;
+      margin: 24px 0 16px 0;
 
       .label {
         color: $text-color-black;
